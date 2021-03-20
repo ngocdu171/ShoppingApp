@@ -16,7 +16,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Register extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView login;
+    //private TextView login;
+    TextView login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         login.setOnClickListener(this);
     }
 
+    //////CHANGE PAGE. MOVE TO LOGIN PAGE
     @Override
     public void onClick(View view) {
         startActivity(new Intent(this, Login.class));
