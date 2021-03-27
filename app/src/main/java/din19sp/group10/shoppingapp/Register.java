@@ -49,7 +49,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         regBtn.setOnClickListener(this);
     }
 
-    //////CHANGE PAGE. MOVE TO LOGIN PAGE
+    //////REDIRECT BETWEEN REGISTER AND LOGIN
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
