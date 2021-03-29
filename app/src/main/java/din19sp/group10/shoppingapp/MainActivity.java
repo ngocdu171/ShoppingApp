@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         mainToolbar = findViewById(R.id.main_toolbar);
         setSupportActionBar(mainToolbar);
-        getSupportActionBar().setTitle("DuPhamShop");
+        getSupportActionBar().setTitle("DMCS_Shop");
     }
 
     @Override
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.profile_menu) {
-            //
+            startActivity(new Intent(MainActivity.this, Profile.class));
         }
         else if (item.getItemId() == R.id.logout_menu) {
             mAuth.signOut();

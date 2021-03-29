@@ -21,6 +21,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class Register extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
@@ -29,6 +31,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     private TextView login;
     private EditText regFullName, regEmail, regPassword, regPhone;
     private Button regBtn;
+    private CircleImageView circleImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,9 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 
         regBtn = findViewById(R.id.registerBtn);
         regBtn.setOnClickListener(this);
+
+        circleImageView = findViewById(R.id.circleImageView);
+        circleImageView.setOnClickListener(this);
     }
 
     //////REDIRECT BETWEEN REGISTER AND LOGIN
@@ -59,7 +65,14 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
             case R.id.registerBtn:
                 registerUser();
                 break;
+            case R.id.circleImageView:
+                avatar();
+                break;
         }
+    }
+
+    private void avatar() {
+        Toast.makeText(Register.this, "Avatar", Toast.LENGTH_SHORT).show();
     }
 
     private void registerUser() {
